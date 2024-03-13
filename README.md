@@ -37,9 +37,8 @@
 
 ## License:
 
-This project is Free to use.
+[MIT](https://choosealicense.com/licenses/mit/)
    
-
 
 
 %%%%%%%%%%** Looking forward to hearing from you soon **%%%%%%%%%%%
