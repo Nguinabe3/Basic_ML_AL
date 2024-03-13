@@ -42,9 +42,9 @@ This project is Free to use.
 
 
 
-%%%%%%%%%%%%%%%%%%%** Looking forward to hearing from you soon **%%%%%%%%%%%
+%%%%%%%%%%** Looking forward to hearing from you soon **%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%**Best Regards**%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%**Best Regards**%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%_JOSUE NGUINABE_%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%_JOSUE NGUINABE_%%%%%%%%%%%%%%%%%%%%%%%%%
 
