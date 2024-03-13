@@ -18,7 +18,7 @@
 
 > Mini-Basch Gradient Descent
 
-**Please, feel free to test it and give me some feedback in order to help me learn more and do impactfull research in the field of Data Science.**
+**Please, feel free to test it and give me some feedback in order to help me learn more and improve my coding skill.**
 
 #### Project description
 
