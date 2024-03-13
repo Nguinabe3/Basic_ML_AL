@@ -7,10 +7,15 @@
 #### This is my  coding project as part of AMMI program. This project content the implementation from scratch of the follwing algorithms :
 
 > Linear Regression
+
 > Logistic Regression
+
 > Basch Gradient Descent
+
 > Stochastic Gradient Descent
+
 > Stochastic Gradient Descent with momentum
+
 > Mini-Basch Gradient Descent
 
 **Please, feel free to test it and give me some feedback in order to help me learn more and do impactfull research in the field of Data Science.**
