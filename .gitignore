@@ -1,0 +1,3 @@
+# ignore ALL .pyc files
+*.pyc
+find . -name "*.pyc" -exec git rm -f "{}" \;

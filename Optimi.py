@@ -8,8 +8,7 @@ class Optimization(LinearRegression):
     super().__init__()
 
   def train_sgd_descent(self,X, y, number_epoc):
-    #number_epoc = int(input("Enter the number of Epoch :"))
-    lr = 0.1#float(input("Enter the learning rate :"))
+    lr = 0.1
     n = X.shape[1]
     n_samples = X.shape[0]
     W = self.initialisation(n)
@@ -33,8 +32,9 @@ class Optimization(LinearRegression):
         W = self.update(W,grad,lr)
         print(f"\nEpoch {e}, loss {loss}")
         store_loss.append(loss)
+        self.plot(X,y,W,number_epoc)
       avg_loss = running_loss/ X.shape[0]
-      return self.plot_loss(store_loss)
+      self.plot_loss(store_loss)
 
 ##################### Train with momementum ######################
   def get_momentum(self, momentum, grad, beta):
@@ -59,7 +59,8 @@ class Optimization(LinearRegression):
       W = self.update(W,momentum,lr)
       print(f"\nEpoch {e}, loss {loss}")
       store_loss.append(loss)
-    return self.plot_loss(store_loss)
+      self.plot(X,y,W,number_epoc)
+      self.plot_loss(store_loss)
 
 ################### Train with mini bash ##########################
 
@@ -87,11 +88,8 @@ class Optimization(LinearRegression):
         grads =  self.gradient(x_batch, y_batch, theta)# compute gradients of loss wrt parameters
         theta = self.update(theta, grads, step_size) # Update your parameters with the gradients
         running_loss += (loss * x_batch.shape[0]) # loss is mean for a batch, dividing by N_batch gives
-                                                  # us a sum for the batch so we can average later by diving
-                                                  # by the full data size
-
       avg_loss = running_loss/ n
       losses.append(avg_loss)
       print(f"\nEpoch {epoch}, loss {avg_loss}")
-
-    return self.plot_loss(losses)
+      self.plot(X,y,theta,num_epochs)
+      self.plot_loss(losses)

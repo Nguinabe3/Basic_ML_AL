@@ -1,10 +1,12 @@
-import numpy as np
-import matplotlib.pyplot as plt 
-from Linear_Reg import LinearRegression
-from Logistic_Reg import LogisticRegression
-from Optimi import Optimization
+#importing the usefull librairies
+import numpy as np # for numerical computation
+import matplotlib.pyplot as plt # for graphical plot
+from Linear_Reg import LinearRegression # importing the class Linear_Reg form linear regression.py file
+from Logistic_Reg import LogisticRegression # Importing the Logistic_Reg model from LogisticRegression.py 
+from Optimi import Optimization # Importing the Optimi model from Optimization.py
 
-from sklearn.datasets import make_classification
+############################## Start Data Load for Logistic Regreesion #########################
+from sklearn.datasets import make_classification # Importing the make classification to extract data form sklearn.datasets
 import sklearn
 #Load the iris dataset from sklearn
 X, y = make_classification(n_features=2, n_redundant=0,
@@ -29,19 +31,20 @@ def train_test_split(X,y):
 
   return X_train, y_train, X_test, y_test
 
-X_train, y_train, X_test, y_test = train_test_split(X,y)
-#print(f" the training shape is: {X_train.shape}")
-#print(f" the test shape is: {X_test.shape}")
+X_train, y_train, X_test, y_test = train_test_split(X,y) #Split our data into train and test
 
+################################# End Data Load for Logistic Regression ###################################
+
+################################# Start Data for linear Regression ########################
 X = np.linspace(0,1, 10)
 y = X + np.random.normal(0, 0.1, (10,))
 X = X.reshape(-1, 1)
 y = y.reshape(-1, 1)
+################################ End Data Load for Linear regression #######################
 
-
-LinReg = LinearRegression()
-Optim = Optimization()
-LogReg = LogisticRegression()
+LinReg = LinearRegression() # Instanciation of the linear regression model
+Optim = Optimization() # Instanciation of the optimisation model for linear regression
+LogReg = LogisticRegression() # Instanciation of the logistic regression model
 
 def main():
     print("Welcome to the Gradient Descent Algorithm Implementation Program")
@@ -59,7 +62,7 @@ def main():
     elif choice == '2':
       Optim.train_sgd_descent(X, y, int(input("Enter the number of epoch:")))
     elif choice == '3':
-      Optim.train_sgd_momentum_descent(X, y, int(input("Enter the number of epoch:")) ,float(input("Enter the value of beta:")), beta=float(input("Enter the value of beta:")))
+      Optim.train_sgd_momentum_descent(X, y, int(input("Enter the number of epoch:")) ,float(input("Enter the Momentum:")), beta=float(input("Enter the value of beta:")))
     elif choice == '4':
       Optim.minibatch_gradient_descent(X, y, int(input("Enter the number of epoch:")), step_size = float(input("Enter the your stepsize:")), batch_size=int(input("Enter the batch_size:")))
     elif choice == '5':
